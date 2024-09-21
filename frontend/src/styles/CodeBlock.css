@@ -1,0 +1,54 @@
+/* src/styles/CodeBlock.css */
+
+.code-block {
+    position: relative; /* Establishes a positioning context for the copy button */
+    margin: 10px 0; /* Adds vertical spacing */
+  }
+  
+  .code-block pre {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    padding: 10px; /* Padding for readability */
+    border-radius: 5px; /* Rounded corners */
+    overflow: auto; /* Scroll if content overflows */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Copy button styling */
+  .copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent; /* Transparent background */
+    border: none; /* No border */
+    color: #ffffff; /* White icon color */
+    font-size: 16px; /* Adequate size for visibility */
+    cursor: pointer; /* Pointer cursor on hover */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+  }
+  
+  .copy-button:hover {
+    color: #00ff00; /* Change to green on hover for better UX */
+  }
+  
+  /* Show the copy button on hover of the code block */
+  .code-block:hover .copy-button {
+    opacity: 1; /* Fully visible on hover */
+  }
+  
+  /* Dark mode adjustments */
+  .app-container.dark .code-block pre {
+    background-color: #1e1e1e; /* Darker background for dark mode */
+    color: #d4d4d4; /* Lighter text for contrast */
+  }
+  
+  .app-container.dark .copy-button {
+    color: #d4d4d4; /* Adjust icon color for dark mode */
+  }
+  
+  .app-container.dark .copy-button:hover {
+    color: #00ff00; /* Consistent hover color in dark mode */
+  }
+  
