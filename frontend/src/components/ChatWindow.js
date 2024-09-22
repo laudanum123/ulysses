@@ -17,7 +17,7 @@ function ChatWindow({ messages, onClearChat }) {
     <div className="chat-window">
       <div className="chat-header">
         <button className="clear-chat-button" onClick={onClearChat}>
-          Clear Chat
+          New Chat
         </button>
       </div>
       <div className="message-list">
