@@ -1,0 +1,67 @@
+/* src/styles/ReasoningChain.css */
+
+.reasoning-chain {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  background-color: #f9f9f9;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.down {
+  transform: rotate(0deg);
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.step {
+  margin-bottom: 15px;
+}
+
+.step h4 {
+  margin-bottom: 5px;
+}
+
+.step pre {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+.step p {
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .reasoning-chain {
+    width: 100%;
+  }
+}
+
+/* Focus Styles for Accessibility */
+.summary:focus {
+  outline: 2px solid #4a76a8; /* Example focus outline */
+}

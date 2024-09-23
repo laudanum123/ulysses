@@ -21,6 +21,7 @@
     flex-direction: column;
     width: 1200px; /* Set a maximum width for the message list */
     margin: 0 auto; /* Center the message list horizontally */
+    font-family: 'Inter', sans-serif; /* Apply the new font */
   }
   
   .clear-chat-button {
@@ -29,3 +30,17 @@
     cursor: pointer;
   }
   
+  .clear-chat-button:hover {
+    background-color: #d32f2f;
+  }
+
+.conversation {
+  margin-bottom: 15px;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align reasoning chain to the left */
+  margin-bottom: 10px; /* Space between messages */
+}

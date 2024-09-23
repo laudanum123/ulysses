@@ -1,129 +1,56 @@
 /* src/styles/Message.css */
 
-/* Base message styles */
 .message {
-  display: flex;
-  max-width: 100%;
-  margin: 5px;
+  max-width: 70%;
   padding: 10px;
   border-radius: 15px;
   word-wrap: break-word;
   position: relative;
   clear: both;
+  margin-bottom: 5px;
 }
 
-/* User message styles (aligned to the right) */
 .message.user {
   align-self: flex-end;
   background-color: #a3a3a3;
   margin-left: auto;
-  margin-right: 10px; /* Offset to the right */ 
+  margin-right: 10px;
   border-bottom-right-radius: 0;
-  padding: 10px;
-  max-width: 70%; /* Ensure messages don't take full width */
 }
 
-/* Assistant message styles (aligned to the left) */
 .message.assistant {
-  display:block;
   align-self: flex-start;
   margin-right: auto;
-  margin-left: 10px; /* Offset to the left */
-  position: relative; /* Needed for the tail */
-  padding: 10px;
-  max-width: 100%; /* Ensure messages don't take full width */
+  margin-left: 10px;
+  border-bottom-left-radius: 0;
 }
 
-/* Message text styling */
 .message p {
   margin: 0;
   line-height: 1.4;
 }
 
-/* Tail for user messages */
-.message.user::after {
+.message.assistant code {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2px 4px;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.message.assistant code::after {
+  content: '📋';
   position: absolute;
-  bottom: 0;
-  right: -8px;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  border-top-color: #ffffff;
-  border-bottom: 0;
-  border-right: 0;
-  margin-top: -8px;
-  margin-right: -8px;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
 }
 
-/* Tail for assistant messages */
-.message.assistant::after {
-  position: absolute;
-  bottom: 0;
-  left: -8px;
-  width: 0;
-  height: 0;
-  border: 8px solid transparent;
-  border-top-color: #ffffff;
-  border-bottom: 0;
-  border-left: 0;
-  margin-top: -8px;
-  margin-left: -8px;
-}
-
-/* Dark mode adjustments */
-.app-container.dark .message.user {
-  background-color: #6a9955;
-}
-
-/* Code block styling */
-.code-block {
-  position: relative; /* Establishes a positioning context for the copy button */
-}
-
-.code-block pre {
-  background-color: #000000; /* Black background */
-  color: #ffffff; /* White font */
-  font-family: 'Courier New', Courier, monospace; /* Coding font */
-  padding: 10px; /* Increased padding for better readability */
-  border-radius: 5px; /* Rounded corners */
-  overflow: auto; /* Scroll if content overflows */
-  margin: 0; /* Remove default margin */
-}
-
-/* Copy button styling */
-.copy-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: transparent; /* Transparent background */
-  border: none; /* No border */
-  color: #ffffff; /* White icon color */
-  font-size: 16px; /* Adequate size for visibility */
-  cursor: pointer; /* Pointer cursor on hover */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s; /* Smooth transition */
-}
-
-/* Show the copy button on hover */
-.code-block:hover .copy-button {
-  opacity: 1; /* Fully visible on hover */
-}
-
-/* Optional: Change button color on hover for better UX */
-.copy-button:hover {
-  color: #00ff00; /* Example: Change to green on hover */
-}
-
-/* Adjustments for dark mode if necessary */
-.app-container.dark .code-block pre {
-  background-color: #1e1e1e; /* Darker background for dark mode */
-  color: #d4d4d4; /* Lighter text for contrast */
-}
-
-.app-container.dark .copy-button {
-  color: #d4d4d4; /* Adjust icon color for dark mode */
-}
-
-.app-container.dark .copy-button:hover {
-  color: #00ff00; /* Consistent hover color in dark mode */
+.message.assistant code:hover::after {
+  opacity: 1;
 }
