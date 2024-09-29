@@ -27,8 +27,8 @@ function ReasoningChain({ totalSteps, texts }) {
         }}
       >
         <span>{`Reasoning Steps: ${totalSteps}`}</span>
-        <span className={`arrow ${isExpanded ? 'up' : 'down'}`}>
-          {isExpanded ? '▲' : '▼'}
+        <span className={`arrow ${isExpanded ? 'down' : 'up'}`}>
+          ◀
         </span>
       </div>
       {isExpanded && (

@@ -4,13 +4,15 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #f5f7fa;
+  color: #333333;
 }
 
 
 /* Light theme */
 .app-container.light {
-  color: #000000;
+  color: #333333;
 }
 .app-container.light .input-box {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }

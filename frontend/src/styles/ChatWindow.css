@@ -4,34 +4,41 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #cfcfcf;
+    background-color: #f5f7fa;
   }
   
   .chat-header {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
+    background-color: #3498db;
   }
   
   .message-list {
     flex: 1;
     overflow-y: auto;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 1200px; /* Set a maximum width for the message list */
-    margin: 0 auto; /* Center the message list horizontally */
-    font-family: 'Inter', sans-serif; /* Apply the new font */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
   }
   
   .clear-chat-button {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
   }
   
   .clear-chat-button:hover {
-    background-color: #d32f2f;
+    background-color: #c0392b;
   }
 
 .conversation {
