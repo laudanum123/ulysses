@@ -1,1 +1,28 @@
-.env
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# React
+build/
+.DS_Store
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# Misc
+*.swp
+*.bak
+*.tmp
