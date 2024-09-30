@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     background-color: #f5f7fa;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* You can add padding here if needed */
   }
   
   .chat-header {

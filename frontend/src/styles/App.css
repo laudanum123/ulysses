@@ -3,9 +3,11 @@
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 98vh;
   background-color: #f5f7fa;
   color: #333333;
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
 }
 
 
